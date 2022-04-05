@@ -40,20 +40,6 @@ router.get('/userProfile', async (req, res) => {
   }
 });
 
-router.get('/search/:last_name', async (req, res) => {
-  try {
-    const searchResult = await User.findAll({ where: {last_name: req.params.last_name }})
-    const searchResultData = searchResult.map((res) => res.get({ plain: true }))
-    console.log(searchResult)
-    res.render('searchresults', { searchResult: searchResultData })
-  } catch (err) {
-    res.status(400).json(err);
-  }
-})
-
-router.get('/searchresults', (req, res) => {
-  res.render('searchresults');
-})
 
 router.get('/signup', (req, res) => {
   res.render('signupform');
