@@ -1,0 +1,820 @@
+/* Defining some common repeating variables that will be used throughout the project. */
+
+:root {
+  --primaryColor: #f9fafb;
+  --secondaryColor: #202121;
+  --ternaryColor: #efefef;
+  --quaternaryColor: #bcbcbc;
+  --bodyCopyFontStyling: 400 12pt/14pt "Lato", sans-serif;
+  --buttonFontStyling: 900 12pt/14pt "Lato", sans-serif;
+  --titleFontStyling: 700 24pt/24pt "Lato", sans-serif;
+  --subTitleFontStyling: 700 18pt/18pt "Lato", sans-serif;
+  --activePrimary: #72c05b;
+  --activeSecondary: #e1ffe1;
+  --badgePrimary: #84d5f7;
+  --badgeSecondary: #f0fcff;
+}
+
+/* Base styling for the body along with a reset for the default margin and padding that is applied through browsers */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  background-color: var(--primaryColor);
+  overflow-x: hidden;
+}
+
+/* Stylization for the main.handlebars begins */
+
+/* Styling for the header section begins. */
+
+header {
+  width: calc(100% - 150px);
+  height: 60px;
+  padding: 20px 75px;
+  background-color: var(--primaryColor);
+  max-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid var(--ternaryColor);
+}
+
+header > #logo {
+  width: 200px;
+  display: inline-block;
+}
+
+header > #nav-icon {
+  display: none;
+}
+
+header > nav {
+  width: calc(100% - 235px);
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header > nav .nav-btn {
+  color: var(--secondaryColor);
+  text-decoration: none;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  font: var(--bodyCopyFontStyling);
+  background-color: var(--primaryColor);
+  border-radius: 2px;
+  transition: 250ms linear;
+  text-transform: uppercase;
+  border: none;
+  display: inline-block;
+}
+
+header > nav .nav-btn:hover {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  transition: 250ms linear;
+}
+
+/* Stylization for the header section ends. */
+
+/* Some simple widths attributes added to the main section of the page */
+
+main {
+  width: 100%;
+  height: auto;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+/* Stylization for the footer section begins */
+
+footer {
+  width: 100%;
+  background-color: var(--primaryColor);
+  border-top: 1px solid var(--ternaryColor);
+}
+
+footer > h6 {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+  text-align: center;
+  padding: 25px 0px 0px 0px;
+}
+
+footer > ul {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+  max-width: 1440px;
+  text-align: center;
+}
+
+footer > ul > li {
+  display: inline-block;
+  margin: 0px 10px;
+  padding: 0px 0px 25px 0px;
+  font: var(--bodyCopyFontStyling);
+  color: var(--secondaryColor);
+}
+
+footer > ul > li > a {
+  color: var(--secondaryColor);
+}
+
+/* Stylization for the footer section ends */
+
+/* Stylization for the main.handlebars ends */
+
+/* Stylization for the homepage.handlebars render begins. */
+
+/* Hero section begins */
+
+#hero-section {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url(../images/1572011051004.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 35px;
+}
+
+#hero-section > h1,
+#hero-section > h2 {
+  width: 75%;
+  max-width: calc(1440px * 0.75);
+  margin: 0px auto;
+  text-align: center;
+  font: var(--titleFontStyling);
+  color: var(--primaryColor);
+}
+
+#hero-section > h1 {
+  font-size: 30pt;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+#hero-section > h2 {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Hero section ends. */
+
+/* most recent post section begins. */
+
+/* most recent post section ends. */
+
+/* Stylization for the homepage.handlebars render ends. */
+
+/* Stylization for the login.handlebars render begins. */
+
+#login-container {
+  width: calc(100% - 200px);
+  padding: 100px;
+  background-color: var(--primaryColor);
+  max-width: 1440px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: column wrap;
+  height: auto;
+  justify-content: space-around;
+  gap: 50px;
+  text-align: center;
+}
+
+#login-container > h2 {
+  font: var(--subTitleFontStyling);
+  color: var(--secondaryColor);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  width: 100%;
+  text-align: center;
+}
+
+#login-container > #login-form {
+  width: 100%;
+  max-width: 1440px;
+  background-color: var(--primaryColor);
+  padding: 0px;
+  margin: 0px;
+  flex: 0 0 auto;
+  display: flex;
+  height: 350px;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  border-top: 1px solid var(--ternaryColor);
+}
+
+#login-container > #login-form > label {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondaryColor);
+  text-align: center;
+}
+
+#login-container > #login-form > input[name] {
+  width: calc(65% - 70px);
+  margin: 0px 17.5%;
+  padding: 10px 35px;
+  text-align: center;
+  font: var(--bodyCopyFontStyling);
+  color: var(--secondaryColor);
+}
+
+#login-container > #login-form > input {
+  border-radius: 5px;
+  border: 2px solid var(--ternaryColor);
+}
+
+#login-container > #login-form > input[type="submit"] {
+  width: 150px;
+  margin: 25px calc(50% - 75px) 0px;
+  padding: 10px 25px;
+  background-color: var(--activePrimary);
+  color: var(--activeSecondary);
+  border: 1px solid var(--activeSecondary);
+  font: var(--buttonFontStyling);
+  transition: 250ms linear;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+#login-container > #login-form > input[type="submit"]:hover {
+  cursor: pointer;
+  transition: 250ms linear;
+  background-color: var(--activeSecondary);
+  color: var(--activePrimary);
+  border: 1px solid var(--activePrimary);
+}
+
+#login-container > p {
+  font: var(--bodyCopyFontStyling);
+  color: var(--secondaryColor);
+  letter-spacing: 0.1em;
+}
+
+#login-container > #incorrectInformation {
+  color: red;
+}
+
+#login-container > p > a {
+  color: var(--secondaryColor);
+  font: var(--bodyCopyFontStyling);
+}
+
+/* Stylization for the login.handlebars render ends. */
+
+/* Stylization for the userProfile.handlebars begins */
+
+#profile-container {
+  width: calc(100% - 300px);
+  padding: 100px 150px;
+  margin: 0px auto;
+  max-width: 1440px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: var(--primaryColor);
+}
+
+#profile-container > img {
+  width: 250px;
+  height: 250px;
+  display: block;
+}
+
+#profile-container > #profile-details {
+  width: calc(100% - 400px);
+  padding: 0px 75px;
+}
+
+#profile-container > #profile-details > h2 {
+  width: 100%;
+  padding: 0px 0px 15px;
+  font: var(--subTitleFontStyling);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+#profile-container > #profile-details > h2 > #location {
+  height: auto;
+  font: var(--bodyCopyFontStyling);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+#profile-container > #profile-details > #health-status {
+  width: fit-content;
+  background-color: var(--badgePrimary);
+  color: var(--badgeSecondary);
+  border: 1px solid var(--badgePrimary);
+  font: var(--bodyCopyFontStyling);
+  padding: 5px 15px;
+  margin: 10px 0px;
+  border-radius: 5px;
+}
+
+#profile-container > #profile-details > #about-me {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+}
+
+/* Stylization for the userProfile.handlebars ends */
+
+/* Stylization for the comments.handlebars begins */
+
+#comments-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+#comment-box {
+  border: solid;
+  height: 20px;
+}
+
+/* Stylization for the newPost.handlebars begins */
+
+#new-post-container {
+  width: calc(100% - 150px);
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 100px 75px;
+}
+
+#new-post-container > h2 {
+  width: 100%;
+  text-align: left;
+  font: var(--subTitleFontStyling);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--ternaryColor);
+}
+
+#new-post-container > #new-post-form {
+  width: calc(100% - 100px);
+  display: flex;
+  height: auto;
+  flex-flow: column wrap;
+  padding: 25px 50px;
+}
+
+#new-post-container > #new-post-form > label {
+  font: var(--bodyCopyFontStyling);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--quaternaryColor);
+  padding: 25px 0px;
+}
+
+#new-post-container > #new-post-form > input {
+  height: auto;
+  padding: 15px 30px;
+  font: var(--bodyCopyFontStyling);
+  color: var(--secondaryColor);
+  width: auto;
+}
+
+#new-post-container > #new-post-form > #post-bio {
+  padding: 15px 30px;
+  width: calc(100% - 60px);
+  height: 300px;
+  resize: none;
+  font: var(--bodyCopyFontStyling);
+  color: var(--secondaryColor);
+  line-height: 18pt;
+  overflow-y: auto;
+}
+
+#new-post-container > #new-post-form > input[type="submit"] {
+  width: auto;
+  margin: 25px auto 0px auto;
+  padding: 15px 30px;
+  background-color: var(--badgePrimary);
+  color: var(--badgeSecondary);
+  border: 1px solid var(--badgeSecondary);
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 250ms ease-in-out;
+}
+
+#new-post-container > #new-post-form > input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--badgeSecondary);
+  color: var(--badgePrimary);
+  border: 1px solid var(--badgePrimary);
+  transition: 250ms ease-in-out;
+}
+
+/* Stylization for the newPost.handlebars ends. */
+
+/* Stylization for the signUpForm.handlebars begins. */
+
+#sign-up-container {
+  width: calc(100% - 200px);
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  padding: 50px 100px;
+  height: auto;
+}
+
+#sign-up-container > form {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  max-width: 1440px;
+}
+
+#sign-up-container > form > section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: stretch;
+  flex-flow: row wrap;
+  gap: 25px;
+  width: 85%;
+  padding: 25px 7.5%;
+}
+
+#sign-up-container > form > section > h2 {
+  width: 100%;
+  font: var(--subTitleFontStyling);
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  padding-bottom: 25px;
+}
+
+/* user information section styling begins */
+
+#sign-up-container > form > #user-information-section > input {
+  flex: 0 0 calc(50% - 75px);
+  max-width: 100%;
+  padding: 10px 25px;
+  font: var(--bodyCopyFontStyling);
+  margin: 0px auto;
+  display: block;
+}
+#sign-up-container > form > section > hr {
+  width: 85%;
+  margin: 0px auto;
+  height: 1px;
+  background-color: var(--quaternaryColor);
+  border: none;
+}
+
+/* user information section styling ends. */
+
+/* user-status styling begins. */
+
+#sign-up-container > form > #user-status-section {
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-status-section > input {
+  width: 0px;
+  opacity: 0px;
+  position: fixed;
+}
+
+#user-status-section > label {
+  flex: 0 2 calc(100% / 3);
+  max-width: 200px;
+  display: inline-block;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  padding: 5px 15px;
+  font: var(--bodyCopyFontStyling);
+  text-transform: uppercase;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 5px;
+}
+
+#user-status-section > label:hover {
+  background-color: var(--badgePrimary);
+  color: var(--badgeSecondary);
+}
+
+#user-status-section > input:focus + label {
+  background-color: var(--badgePrimary);
+  color: var(--badgeSecondary);
+}
+
+#user-status-section > input:checked + label {
+  background-color: var(--badgePrimary);
+  color: var(--badgeSecondary);
+}
+
+/* user-status styling ends. */
+
+/* user location section begins. */
+
+#sign-up-container > form > #user-location-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-location-section select {
+  padding: 5px 15px;
+  font: var(--bodyCopyFontStyling);
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  border: 1px solid var(--quaternaryColor);
+  border-radius: 5px;
+  width: calc(50% - 55px);
+  text-align: center;
+}
+
+#user-location-section input {
+  width: calc(50% - 55px);
+  font: var(--bodyCopyFontStyling);
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--quaternaryColor);
+  text-align: center;
+}
+
+/* user location section ends. */
+
+/* Stylization for the signUpForm.handlebars ends. */
+
+/* Stylization for recent post container begins. */
+
+#recent-post-container {
+  width: calc(100% - 150px);
+  margin: 0px auto;
+  padding: 50px 75px;
+  max-width: 1440px;
+}
+
+#recent-post-container > h2 {
+  font: var(--subTitleFontStyling);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#recent-post-container > h3 {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+  padding: 25px 0px 12.5px 0px;
+}
+
+#recent-post-container > h4 {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+  font-weight: 600;
+  padding-bottom: 12.5px;
+}
+
+#recent-post-container > p {
+  width: 100%;
+  font: var(--bodyCopyFontStyling);
+}
+
+#recent-post-container > button {
+  margin: 0px auto;
+  display: block;
+  margin-top: 25px;
+  padding: 5px 15px;
+  background-color: var(--badgePrimary);
+  border: 2px solid var(--badgeSecondary);
+  border-radius: 5px;
+  color: white;
+  font: var(--buttonFontStyling);
+  transition: 250ms ease-in-out;
+}
+
+#recent-post-container > button:hover {
+  background-color: var(--badgeSecondary);
+  color: var(--badgePrimary);
+  transition: 250ms ease-in-out;
+  border: 2px solid var(--badgePrimary);
+}
+
+/* Stylization for recent post container ends. */
+
+/* Media queries begin. */
+
+@media screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    flex-flow: column;
+    height: auto;
+  }
+
+  header > nav {
+    width: auto;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    display: flex;
+  }
+
+  #profile-container {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    gap: 25px;
+  }
+
+  #profile-container > img {
+    width: 250px;
+    margin: 0px auto;
+  }
+
+  #profile-container > #profile-details {
+    width: 100%;
+    padding: 0px;
+  }
+
+  #profile-container > #profile-details > #health-status {
+    margin: 0px auto 15px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main {
+    padding-top: 100px;
+  }
+
+  header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 25px 0px 10px;
+    overflow: hidden;
+    z-index: 10;
+    transition: 400ms ease-in-out;
+  }
+
+  header.closed {
+    height: 60px;
+    background-color: var(--primaryColor);
+  }
+
+  header.open {
+    height: 100vh;
+    background-color: var(--ternaryColor);
+  }
+
+  header > #logo {
+    position: absolute;
+    left: calc(50% - 100px);
+  }
+
+  header > #nav-icon {
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    width: 25px;
+    height: 25px;
+    top: 35px;
+  }
+
+  header > nav {
+    display: none;
+  }
+
+  nav.open {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    height: calc(100vh - 100px);
+    gap: 25px;
+  }
+
+  nav.open > #navigation-links {
+    width: 100%;
+    height: calc(65vh - 100px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  nav.open > #navigation-links > a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    border-top: 1px solid var(--secondaryColor);
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    background-color: var(--ternaryColor);
+  }
+
+  nav.open > #navigation-links > a:hover {
+    background-color: var(--secondaryColor);
+  }
+
+  nav.open > #navigation-links > a:first-of-type {
+    border-top: none;
+  }
+
+  nav.open > #navigation-account {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  nav.open > #navigation-account > a {
+    padding: 25px 0px;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    background-color: var(--ternaryColor);
+  }
+
+  nav.open > #navigation-account > a:hover {
+    background-color: var(--secondaryColor);
+  }
+
+  #navigation-account > input {
+    width: 85%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--ternaryColor);
+    color: var(--secondaryColor);
+  }
+
+  #navigation-account > button {
+    width: 100%;
+    padding: 15px;
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+    background-color: var(--ternaryColor);
+    transition: 250ms ease-in-out;
+  }
+
+  #navigation-account > #searchSubmit {
+    width: 100px;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: -39px;
+    padding: 9px 0px;
+    display: block;
+    margin-left: calc(97% - 100px);
+  }
+
+  #navigation-account > button:hover {
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    transition: 250ms ease-in-out;
+  }
+
+  nav.closed {
+    transition-delay: 0ms;
+    height: auto;
+    display: none;
+  }
+}
+
+/* Media queries end. */

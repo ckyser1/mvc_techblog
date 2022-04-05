@@ -1,0 +1,14 @@
+<section id="profile-container">
+    <img src="/images/profilePlaceholder.png" alt="placeholder for the profile icon.">
+    <section id="profile-details">
+        <h2>{{user.first_name}} {{user.last_name}} // <span id="location">{{user.location}}</span></h2>
+        <h3 id="health-status">Status: {{user.health_status}}</h3>
+        <p id="about-me">{{user.post.post_bio}}</p>
+    </section>
+    <section id="profile-active-post">
+        <a href="/newPosting" class="profile-btn">New Posting</a>
+        {{> specificPost}}
+    </section>
+</section>
+
+

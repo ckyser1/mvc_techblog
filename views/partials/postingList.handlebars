@@ -1,0 +1,12 @@
+<br>
+<section id="posting-list-sidebar">
+    <ul>
+        {{#each userPosts as |post|}}
+        <li>
+            <h3>{{post.user.first_name}} {{post.user.last_name}}</h3>
+            <p>{{post.post_title}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    
+</section>
